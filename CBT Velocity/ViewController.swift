@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIPageViewControllerDataSource {
     
+    // MARK: Variables
+    
     var pageViewController: UIPageViewController!
     var pageTitles: NSArray!
     var pageImages: NSArray!
@@ -56,7 +58,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         return vc
     }
     
-    // MARK: Page View Controller Data Source
+    // MARK: PageViewControllerDataSource
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! ContentViewController
