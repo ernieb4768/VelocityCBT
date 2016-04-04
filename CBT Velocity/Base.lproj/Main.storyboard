@@ -46,16 +46,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Velocity" translatesAutoresizingMaskIntoConstraints="NO" id="JUk-oV-49A">
-                                <rect key="frame" x="15" y="20" width="560" height="250"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAM-Ex-ukZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Velocity" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-cA-B4q">
+                                        <rect key="frame" x="8" y="8" width="584" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="8bY-e8-Iyw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="loX-40-BxE">
+                                        <rect key="frame" x="8" y="266" width="584" height="348"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who we are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-Qq-evR">
+                                                <rect key="frame" x="0.0" y="0.0" width="584" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffn-M4-6ef">
+                                                <rect key="frame" x="0.0" y="24" width="584" height="36"/>
+                                                <string key="text">Velocity is our high school ministry here at the Canton Baptist Temple. We include all students in high school grades 9 through 12.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why we exist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8h-oE-Y9c">
+                                                <rect key="frame" x="0.0" y="60" width="584" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayC-fJ-tZs">
+                                                <rect key="frame" x="0.0" y="84" width="584" height="90"/>
+                                                <string key="text">At Velocity, we exist for the purpose of reaching and impacting the lives of students through pursuing a relationship with Jesus Christ. This ministry recognizes that all students are searching for something to fill the emptiness they experience and we are positive that these feelings of emptiness can only be satisfied when fath in Jesus Christ is experinced.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What we believe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-ae-85B">
+                                                <rect key="frame" x="0.0" y="174" width="584" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iu-EV-HBt">
+                                                <rect key="frame" x="0.0" y="198" width="584" height="54"/>
+                                                <string key="text">We believe and teach that the King James Version Bible is the Holy, inspired word of God, and that the only way to heaven is through a personal relationship with Jesus Christ.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where we are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHo-AE-Lmh">
+                                                <rect key="frame" x="0.0" y="252" width="584" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-DX-Lkr">
+                                                <rect key="frame" x="0.0" y="276" width="584" height="72"/>
+                                                <string key="text">The Canton Baptist Temple is located at: 
+515 Whipple Ave, NW
+Canton, OH 44708
+Enter door G and come up the stairs, you will find us in the first room on the right!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="When we meet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64v-Hp-ZYn">
+                                                <rect key="frame" x="0.0" y="348" width="584" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We meet every Sunday morning at 9:00am and every Wednesday at 7:00pm." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-s8-gcU">
+                                                <rect key="frame" x="0.0" y="348" width="584" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DGY-s8-gcU" firstAttribute="top" secondItem="64v-Hp-ZYn" secondAttribute="top" id="3lB-F2-acT"/>
+                                            <constraint firstItem="64v-Hp-ZYn" firstAttribute="bottom" secondItem="DGY-s8-gcU" secondAttribute="bottom" id="dLo-2D-5Ck"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="loX-40-BxE" firstAttribute="bottom" secondItem="TAM-Ex-ukZ" secondAttribute="bottomMargin" id="4Av-zh-JoN"/>
+                                    <constraint firstItem="2zU-cA-B4q" firstAttribute="leading" secondItem="loX-40-BxE" secondAttribute="leading" id="6K1-9Y-04j"/>
+                                    <constraint firstItem="2zU-cA-B4q" firstAttribute="leading" secondItem="TAM-Ex-ukZ" secondAttribute="leadingMargin" id="Qc8-E4-Xww"/>
+                                    <constraint firstItem="2zU-cA-B4q" firstAttribute="trailing" secondItem="loX-40-BxE" secondAttribute="trailing" id="SKG-Bh-2xZ"/>
+                                    <constraint firstItem="loX-40-BxE" firstAttribute="top" secondItem="2zU-cA-B4q" secondAttribute="bottom" constant="8" symbolic="YES" id="i69-45-8hY"/>
+                                    <constraint firstItem="2zU-cA-B4q" firstAttribute="centerX" secondItem="TAM-Ex-ukZ" secondAttribute="centerX" id="orm-aG-OVA"/>
+                                    <constraint firstItem="2zU-cA-B4q" firstAttribute="trailing" secondItem="TAM-Ex-ukZ" secondAttribute="trailingMargin" id="ySv-9S-YGD"/>
+                                    <constraint firstItem="2zU-cA-B4q" firstAttribute="top" secondItem="TAM-Ex-ukZ" secondAttribute="topMargin" id="zDN-7O-dbP"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JUk-oV-49A" firstAttribute="top" secondItem="0Xq-pl-pj0" secondAttribute="bottom" id="RvW-YJ-d6a"/>
-                            <constraint firstItem="JUk-oV-49A" firstAttribute="leading" secondItem="hVf-Y9-zB6" secondAttribute="leadingMargin" constant="-5" id="Y1i-L6-zEO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JUk-oV-49A" secondAttribute="trailing" constant="5" id="YKd-rt-CCw"/>
-                            <constraint firstItem="cPh-nY-lV5" firstAttribute="top" secondItem="JUk-oV-49A" secondAttribute="bottom" constant="330" id="z5i-1P-K8S"/>
+                            <constraint firstItem="TAM-Ex-ukZ" firstAttribute="bottom" secondItem="cPh-nY-lV5" secondAttribute="top" id="35k-TD-Zkm"/>
+                            <constraint firstAttribute="trailing" secondItem="TAM-Ex-ukZ" secondAttribute="trailing" id="8j5-AG-DRI"/>
+                            <constraint firstItem="TAM-Ex-ukZ" firstAttribute="top" secondItem="hVf-Y9-zB6" secondAttribute="top" id="F52-JW-RjF"/>
+                            <constraint firstItem="TAM-Ex-ukZ" firstAttribute="leading" secondItem="hVf-Y9-zB6" secondAttribute="leading" id="GJQ-qd-8SZ"/>
                         </constraints>
                     </view>
                 </viewController>
