@@ -16,23 +16,48 @@
             </objects>
             <point key="canvasLocation" x="519" y="-323"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="A6W-gT-0RR">
+        <!--Activities View Controller-->
+        <scene sceneID="5v1-Y5-VzQ">
             <objects>
-                <viewController storyboardIdentifier="ActivitiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="47b-sT-53k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9PH-1X-kaY"/>
-                        <viewControllerLayoutGuide type="bottom" id="761-F3-lPc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9CM-hq-9jD">
+                <tableViewController storyboardIdentifier="ActivitiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kaQ-lo-RbS" customClass="ActivitiesViewController" customModule="CBT_Velocity" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" id="8cf-Qw-oH9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byP-NA-df1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="knI-TR-3no" customClass="ActivitiesTableViewCell" customModule="CBT_Velocity" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knI-TR-3no" id="IoU-m8-eW3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDu-I7-JNH">
+                                            <rect key="frame" x="8" y="8" width="584" height="283"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="qDu-I7-JNH" firstAttribute="top" secondItem="IoU-m8-eW3" secondAttribute="topMargin" id="A5n-MH-Ciz"/>
+                                        <constraint firstItem="qDu-I7-JNH" firstAttribute="centerX" secondItem="IoU-m8-eW3" secondAttribute="centerX" id="R7L-au-USr"/>
+                                        <constraint firstItem="qDu-I7-JNH" firstAttribute="trailing" secondItem="IoU-m8-eW3" secondAttribute="trailingMargin" id="bha-Od-0J7"/>
+                                        <constraint firstItem="qDu-I7-JNH" firstAttribute="leading" secondItem="IoU-m8-eW3" secondAttribute="leadingMargin" id="erF-R8-nkE"/>
+                                        <constraint firstItem="qDu-I7-JNH" firstAttribute="bottom" secondItem="IoU-m8-eW3" secondAttribute="bottomMargin" id="lWT-qk-8uV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kaQ-lo-RbS" id="2QY-nD-P7A"/>
+                            <outlet property="delegate" destination="kaQ-lo-RbS" id="Ot3-qz-2B6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7V-yq-MLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211" y="350"/>
+            <point key="canvasLocation" x="204" y="352"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cQr-uQ-KoD">
