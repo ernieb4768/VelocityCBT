@@ -12,12 +12,13 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDataSo
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
-        return [self.newColoredViewController("ActivitiesViewController"),
-                self.newColoredViewController("AboutUsViewController")]
+        return [self.newMainViewController("ActivitiesViewController"),
+                self.newMainViewController("AboutUsViewController")]
     }()
     
-    private func newColoredViewController(title: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .instantiateViewControllerWithIdentifier(title)
+    private func newMainViewController(title: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewControllerWithIdentifier(title)
     }
 
     override func viewDidLoad() {
@@ -26,7 +27,8 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDataSo
         dataSource = self
         
         if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController], direction: .Forward, animated: true, completion: nil)
+            setViewControllers([firstViewController], direction: .Forward, animated: true,
+                               completion: nil)
         }
     }
 
@@ -37,7 +39,9 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDataSo
     
     // MARK: UIPageViewControllerDataSource
         
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(pageViewController: UIPageViewController,
+        viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
         guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
             return nil
         }
@@ -55,7 +59,9 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDataSo
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(pageViewController: UIPageViewController,
+        viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        
         guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {
             return nil
         }

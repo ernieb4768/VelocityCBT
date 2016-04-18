@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="knI-TR-3no" customClass="ActivitiesTableViewCell" customModule="CBT_Velocity" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="300" id="knI-TR-3no" customClass="ActivitiesTableViewCell" customModule="CBT_Velocity" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knI-TR-3no" id="IoU-m8-eW3">
@@ -34,18 +34,42 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDu-I7-JNH">
                                             <rect key="frame" x="8" y="8" width="584" height="283"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come to Insomnia with us!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceC-oC-etW">
+                                                    <rect key="frame" x="8" y="254" width="568" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="HHg-Am-tpC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ceC-oC-etW" firstAttribute="bottom" secondItem="qDu-I7-JNH" secondAttribute="bottomMargin" id="bky-zv-bf0"/>
+                                                <constraint firstItem="ceC-oC-etW" firstAttribute="leading" secondItem="qDu-I7-JNH" secondAttribute="leadingMargin" id="f7A-hd-Isb"/>
+                                                <constraint firstItem="ceC-oC-etW" firstAttribute="trailing" secondItem="qDu-I7-JNH" secondAttribute="trailingMargin" id="pOz-3u-dv5"/>
+                                            </constraints>
                                         </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Insomnia" translatesAutoresizingMaskIntoConstraints="NO" id="WQ6-UO-kNG">
+                                            <rect key="frame" x="8" y="8" width="584" height="240"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="qDu-I7-JNH" firstAttribute="top" secondItem="IoU-m8-eW3" secondAttribute="topMargin" id="A5n-MH-Ciz"/>
+                                        <constraint firstItem="WQ6-UO-kNG" firstAttribute="leading" secondItem="qDu-I7-JNH" secondAttribute="leading" id="AP2-Kp-JFc"/>
+                                        <constraint firstItem="WQ6-UO-kNG" firstAttribute="top" secondItem="qDu-I7-JNH" secondAttribute="top" id="FFI-ma-hGt"/>
                                         <constraint firstItem="qDu-I7-JNH" firstAttribute="centerX" secondItem="IoU-m8-eW3" secondAttribute="centerX" id="R7L-au-USr"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WQ6-UO-kNG" secondAttribute="bottom" constant="43" id="RXf-gu-bEt"/>
+                                        <constraint firstItem="WQ6-UO-kNG" firstAttribute="trailing" secondItem="qDu-I7-JNH" secondAttribute="trailing" id="UQU-GF-5Rx"/>
                                         <constraint firstItem="qDu-I7-JNH" firstAttribute="trailing" secondItem="IoU-m8-eW3" secondAttribute="trailingMargin" id="bha-Od-0J7"/>
                                         <constraint firstItem="qDu-I7-JNH" firstAttribute="leading" secondItem="IoU-m8-eW3" secondAttribute="leadingMargin" id="erF-R8-nkE"/>
                                         <constraint firstItem="qDu-I7-JNH" firstAttribute="bottom" secondItem="IoU-m8-eW3" secondAttribute="bottomMargin" id="lWT-qk-8uV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
@@ -80,74 +104,74 @@
                                             <constraint firstAttribute="height" constant="250" id="8bY-e8-Iyw"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="loX-40-BxE">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="loX-40-BxE">
                                         <rect key="frame" x="8" y="266" width="584" height="348"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who we are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqJ-Qq-evR">
                                                 <rect key="frame" x="0.0" y="0.0" width="584" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffn-M4-6ef">
                                                 <rect key="frame" x="0.0" y="24" width="584" height="36"/>
                                                 <string key="text">Velocity is our high school ministry here at the Canton Baptist Temple. We include all students in high school grades 9 through 12.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why we exist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8h-oE-Y9c">
                                                 <rect key="frame" x="0.0" y="60" width="584" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayC-fJ-tZs">
                                                 <rect key="frame" x="0.0" y="84" width="584" height="90"/>
                                                 <string key="text">At Velocity, we exist for the purpose of reaching and impacting the lives of students through pursuing a relationship with Jesus Christ. This ministry recognizes that all students are searching for something to fill the emptiness they experience and we are positive that these feelings of emptiness can only be satisfied when fath in Jesus Christ is experinced.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What we believe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-ae-85B">
                                                 <rect key="frame" x="0.0" y="174" width="584" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iu-EV-HBt">
                                                 <rect key="frame" x="0.0" y="198" width="584" height="54"/>
                                                 <string key="text">We believe and teach that the King James Version Bible is the Holy, inspired word of God, and that the only way to heaven is through a personal relationship with Jesus Christ.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where we are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHo-AE-Lmh">
                                                 <rect key="frame" x="0.0" y="252" width="584" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-DX-Lkr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-DX-Lkr">
                                                 <rect key="frame" x="0.0" y="276" width="584" height="72"/>
                                                 <string key="text">The Canton Baptist Temple is located at: 
 515 Whipple Ave, NW
 Canton, OH 44708
 Enter door G and come up the stairs, you will find us in the first room on the right!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="When we meet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64v-Hp-ZYn">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When we meet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64v-Hp-ZYn">
                                                 <rect key="frame" x="0.0" y="348" width="584" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We meet every Sunday morning at 9:00am and every Wednesday at 7:00pm." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-s8-gcU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We meet every Sunday morning at 9:00am and every Wednesday at 7:00pm." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGY-s8-gcU">
                                                 <rect key="frame" x="0.0" y="348" width="584" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -202,6 +226,7 @@ Enter door G and come up the stairs, you will find us in the first room on the r
         </scene>
     </scenes>
     <resources>
+        <image name="Insomnia" width="780" height="593"/>
         <image name="Velocity" width="925" height="474"/>
     </resources>
 </document>
