@@ -93,6 +93,7 @@ class ActivitiesViewController: UITableViewController {
                     print(dataBlock)
                 }
             }
+            refreshTable()
         }
     }
     
@@ -112,7 +113,7 @@ class ActivitiesViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the TableView
-        return activities.count
+        return TableData.count
     }
 
     override func tableView(tableView: UITableView,
