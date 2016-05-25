@@ -24,11 +24,13 @@ class CustomPageViewController: UIPageViewController, UIPageViewControllerDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set the data source for the PageViewController
         dataSource = self
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .Forward, animated: true,
                                completion: nil)
+            
         }
     }
 

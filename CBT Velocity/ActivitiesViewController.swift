@@ -9,9 +9,36 @@
 import UIKit
 
 class ActivitiesViewController: UITableViewController {
+    
+    var activities = Array<String>()
+    let urlPath = "http://76.188.89.113/getAllActivities.php"
+    
+    @IBOutlet var uiTableView: UITableView!
+    
+    var TableData: Array<datastruct> = Array<datastruct>()
+    
+    enum ErrorHandler: ErrorType {
+        case ErrorFetchingResults
+    }
+    
+    struct datastruct {
+        var imageURL: String?
+        var description: String?
+        var image: UIImage? = nil
+        
+        init(add: NSDictionary){
+            imageURL = add["IMAGE"] as? String
+            description = add["DESCRIPTION"] as? String
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        uiTableView.dataSource = self
+        uiTableView.delegate = self
+        
+        getActivitiesFromJson(urlPath)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,6 +52,56 @@ class ActivitiesViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Retrieve the JSON array from the url.
+    func getActivitiesFromJson(url: String){
+        
+        let url: NSURL = NSURL(string: url)!
+        let session = NSURLSession.sharedSession()
+        
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "GET"
+        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        
+        let task = session.dataTaskWithRequest(request) {(let data, let response, let error) in
+            guard let _: NSData = data, let _: NSURLResponse = response where error == nil else {
+                print("error")
+                return
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.extractJson(data!)
+                return
+            })
+        }
+        task.resume()
+    }
+    
+    func extractJson(jsonData: NSData) {
+        let json: AnyObject?
+        do {
+           json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: [])
+        } catch {
+            json = nil
+            return
+        }
+        
+        if let list = json as? NSArray {
+            for i in 0 ..< list.count{
+                if let dataBlock = list[i] as? NSDictionary {
+                    TableData.append(datastruct(add: dataBlock))
+                    print(dataBlock)
+                }
+            }
+        }
+    }
+    
+    func refreshTable(){
+        dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.reloadData()
+            return
+        })
+    }
 
     // MARK: - Table view data source
 
@@ -34,8 +111,8 @@ class ActivitiesViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 5
+        // Return the number of rows in the TableView
+        return activities.count
     }
 
     override func tableView(tableView: UITableView,
@@ -44,7 +121,10 @@ class ActivitiesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReusableCell",
                                                                forIndexPath: indexPath)
 
-        // Configure the cell...currently none needed so it is just being returned.
+        // Configure the cell.
+        let data = TableData[indexPath.row]
+        cell.textLabel?.text = data.description
+        
         return cell
     }
 
